@@ -504,6 +504,10 @@ body {
   color: black !important;
 }
 
+.nav-links li.contact-btn a::after {
+  background: black !important;
+}
+
 /* Page transitions */
 .page-transition {
   animation: fadeIn 0.6s ease-in-out;
