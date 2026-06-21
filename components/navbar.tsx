@@ -43,9 +43,9 @@ export default function Navbar() {
         <li className={pathname === "/resume" ? "active" : ""}>
           <Link href="/resume">Resume</Link>
         </li>
-        <li className={pathname === "/testimonials" ? "active" : ""}>
+        {/* <li className={pathname === "/testimonials" ? "active" : ""}>
           <Link href="/testimonials">Testimonials</Link>
-        </li>
+        </li> */}
         <li className={`contact-btn ${pathname === "/contact" ? "active" : ""}`}>
           <Link href="/contact">Contact</Link>
         </li>

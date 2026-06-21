@@ -6,34 +6,53 @@ import Link from "next/link";
 export default function ResumePage() {
   const education = [
     {
-      period: "2022 - Present",
+      period: "2024 - Present",
       institution: "SMK Telkom Malang",
-      program: "Rekayasa Perangkat Lunak (RPL)",
-      description: "Focusing on software development, database management, and web technologies."
+      program: "Rekayasa Perangkat Lunak (Software Engineering)",
+      description: "Focused on full-stack development, software architecture, backend engineering, cloud technologies, databases, and AI-powered systems."
     }
   ];
 
   const experiences = [
     {
-      period: "2024 - Present",
-      title: "Fullstack Developer",
-      company: "Freelance / Projects",
-      description: "Building full-stack web applications using modern technologies like Next.js, NestJS, and MySQL. Working on various client projects and personal initiatives.",
-      technologies: ["Next.js", "NestJS", "MySQL", "AWS", "TypeScript"]
+      period: "2026 - Present",
+      title: "Full Stack Developer",
+      company: "Freelance & Projects",
+      description: "Building production-grade web applications using modern technologies such as Next.js, TypeScript, NestJS, Prisma, PostgreSQL, and cloud-based services. Key Projects: BlockMaps SaaS, PDAM Management Dashboard, AgroConnect Hub.",
+      technologies: ["Next.js", "TypeScript", "NestJS", "Prisma", "PostgreSQL", "Cloud Services"]
     },
     {
-      period: "2023 - 2024",
-      title: "Tech & Finance Enthusiast",
-      company: "Self Learning",
-      description: "Deep dive into financial technologies, investment analysis, and integrating finance concepts with tech solutions.",
-      technologies: ["Finance Analysis", "ROI Calculation", "Data-Driven Decisions"]
+      period: "2026 - Present",
+      title: "AI Automation Developer",
+      company: "Projects",
+      description: "Developing automation systems and AI-powered tools utilizing Google Gemini API, local AI search systems, workflow automation, and intelligent productivity solutions.",
+      technologies: ["Google Gemini API", "Workflow Automation", "Local AI Search"]
+    },
+    {
+      period: "2024 - Present",
+      title: "Backend & Software Engineering Learner",
+      company: "Self-Learning & Projects",
+      description: "Exploring software architecture, OOP principles, business logic implementation, and scalable backend development through advanced personal projects. Key Projects: TechMaster Python, Enterprise Inventory Systems.",
+      technologies: ["Software Architecture", "OOP", "Backend Development"]
     }
   ];
 
   const certifications = [
-    "Fullstack Web Development Certificate",
-    "Database Management Systems",
-    "Cloud Computing Basics (AWS)"
+    {
+      title: "AWS Cloud Computing Fundamentals",
+      issuer: "Amazon Web Services",
+      image: "/image/certificates/aws-cert.png"
+    },
+    {
+      title: "Banyuwangi AI Certification",
+      issuer: "Banyuwangi Tech",
+      image: "/image/certificates/banyuwangi-ai.png"
+    },
+    {
+      title: "AMD Technology Certification",
+      issuer: "AMD",
+      image: "/image/certificates/amd-cert.png"
+    }
   ];
 
   return (
@@ -120,18 +139,32 @@ export default function ResumePage() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2 className="section-title">Certifications</h2>
-            <ul className="certifications-list">
+            <div className="projects-grid mt-6">
               {certifications.map((cert, index) => (
-                <motion.li
+                <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  className="project-card"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -10 }}
                 >
-                  ✓ {cert}
-                </motion.li>
+                  <div className="project-image-wrapper">
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="project-image"
+                      style={{ objectFit: 'cover' }}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?w=800&q=80"
+                      }}
+                    />
+                  </div>
+                  <h2 className="project-title">{cert.title}</h2>
+                  <p className="project-description text-orange-500">{cert.issuer}</p>
+                </motion.div>
               ))}
-            </ul>
+            </div>
           </motion.section>
         </div>
       </div>

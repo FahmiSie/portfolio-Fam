@@ -5,36 +5,12 @@ import Link from "next/link";
 
 const blogPosts = [
   {
-    slug: "getting-started-with-nextjs",
-    title: "Getting Started with Next.js 14",
-    excerpt: "Learn the fundamentals of Next.js 14 and how to build modern web applications with React Server Components.",
-    date: "March 15, 2024",
-    category: "Web Development",
-    readTime: "5 min read"
-  },
-  {
-    slug: "finance-and-tech",
-    title: "Bridging Finance and Technology",
-    excerpt: "Exploring how technology is revolutionizing the finance industry and how developers can contribute to this transformation.",
-    date: "March 10, 2024",
-    category: "Finance",
-    readTime: "8 min read"
-  },
-  {
-    slug: "fullstack-development-tips",
-    title: "Fullstack Development Best Practices",
-    excerpt: "Essential tips and tricks for building robust fullstack applications that scale efficiently.",
-    date: "March 5, 2024",
-    category: "Development",
-    readTime: "6 min read"
-  },
-  {
-    slug: "aws-cloud-fundamentals",
-    title: "AWS Cloud Fundamentals for Beginners",
-    excerpt: "A beginner-friendly guide to understanding AWS services and deploying your first application to the cloud.",
-    date: "February 28, 2024",
-    category: "Cloud",
-    readTime: "10 min read"
+    slug: "building-rbac-authentication-nestjs",
+    title: "Building RBAC Authentication with NestJS",
+    excerpt: "Implementing a structured Role-Based Access Control (RBAC) system using NestJS, Prisma, and JWT for scalable enterprise applications.",
+    date: "June 20, 2026",
+    category: "Backend Development",
+    readTime: "3 min read"
   }
 ];
 

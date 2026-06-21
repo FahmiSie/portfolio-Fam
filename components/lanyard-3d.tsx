@@ -62,7 +62,7 @@ export default function ProfileCard3D() {
           <div className="lanyard3d-avatar" style={{ transform: "translateZ(50px)" }}>
             <Image
               src="/image/profile/fam.png"
-              alt="Fahmi Maulana"
+              alt="Fahmi Aqila Maulana"
               width={180}
               height={180}
               priority
@@ -73,7 +73,7 @@ export default function ProfileCard3D() {
           <h3 className="lanyard3d-title" style={{ transform: "translateZ(40px)" }}>Fullstack<br/>DEV</h3>
 
           <div className="lanyard3d-footer">
-            <span>© 2024 - 2026 • CREATED BY FAM</span>
+            <span>©2025</span>
           </div>
         </div>
       </motion.div>

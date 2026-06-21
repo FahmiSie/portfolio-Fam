@@ -13,7 +13,7 @@ body {
   background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background-size: 80px 80px;
 }
 
 .navbar {
@@ -1175,21 +1175,24 @@ body {
 
 .project-image-wrapper {
   width: 100%;
-  height: 200px;
+  height: 220px;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 
 .project-image {
-  width: 100%;
-  height: 100%;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 
@@ -1434,9 +1437,41 @@ body {
   border-color: rgba(255, 92, 53, 0.5);
 }
 
+.featured-image-wrapper {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.featured-image {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover .featured-image {
+  transform: scale(1.1);
+}
+
 .featured-icon {
   font-size: 4rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .featured-card h3 {
@@ -1740,7 +1775,7 @@ body {
   padding: 30px 60px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
@@ -2071,5 +2106,94 @@ body {
   .blog-action-btn {
     width: 100%;
     text-align: center;
+  }
+}
+
+/* --- UI IMPROVEMENTS --- */
+
+/* 1. PROJECT GRID & CARD IMPROVEMENTS (Solid Background, Shadow, No Transparency) */
+.project-card, .testimonial-card, .blog-card, .portfolio-card, .featured-card, .logo-card {
+  background: #111111 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  z-index: 2; /* Sit above grid */
+  position: relative;
+}
+
+/* 2. PROJECT SECTION GRID LAYOUT */
+.projects-grid, .featured-grid, .portfolio-grid, .blog-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 30px !important;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid, .featured-grid, .portfolio-grid, .blog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid, .featured-grid, .portfolio-grid, .blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Equal Heights for Cards */
+.project-card, .featured-card, .blog-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+.project-card .project-link, .featured-card .featured-link, .blog-card .blog-card-footer {
+  margin-top: auto !important;
+}
+
+/* Footer layout fix */
+@media (min-width: 969px) {
+  .footer-container {
+    grid-template-columns: 2fr 1fr !important;
+  }
+}
+/* Fix Footer Social Link Colors */
+.social-link {
+  color: white !important;
+}
+.social-link:hover {
+  color: #ff5a36 !important;
+}
+.social-link svg {
+  color: inherit;
+  fill: currentColor;
+}
+/* --- FOOTER FIXES (Height & Columns) --- */
+
+/* Split Quick Links into 2 columns (Left 4, Right 3 sequentially) */
+.footer-links {
+  display: block !important;
+  column-count: 2 !important;
+  column-gap: 40px !important;
+}
+.footer-links li {
+  margin-bottom: 12px !important;
+  break-inside: avoid;
+}
+
+/* Reduce Footer Height & Spacing */
+.footer {
+  padding: 40px 0 20px !important;
+  margin-top: 60px !important;
+}
+
+.footer-bottom {
+  margin: 30px auto 0 !important;
+  padding: 20px 60px 0 !important;
+}
+
+@media (max-width: 968px) {
+  .footer-bottom {
+    padding: 20px 30px 0 !important;
   }
 }

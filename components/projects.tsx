@@ -1,56 +1,100 @@
+/**
+ * PROJECTS DATA
+ * 
+ * Untuk menggunakan gambar lokal:
+ * 1. Letakkan file gambar di folder public/image/projects/
+ * 2. Gunakan path yang dimulai dengan "/" (tanpa "/public")
+ *    Contoh: "/image/projects/nama-file.png"
+ * 
+ * Untuk menggunakan gambar dari URL eksternal:
+ * - Gunakan URL lengkap dengan https://
+ * - Pastikan domain sudah ditambahkan di next.config.ts (remotePatterns)
+ * 
+ * Jika gambar tidak ditemukan, akan otomatis menampilkan emoji icon sebagai fallback
+ */
 
 export const projectsData = [
     {
-        "title": "Cashier System",
-        "slug": "cashier-system",
-        "description": "A comprehensive cashier system built with JavaFX and MySQL database integration. Features inventory management, sales tracking, and reporting capabilities.",
-        "category": "web",
-        "tech": "Java, JavaFX, MySQL",
-        "image": "💻",
-        "imagePath": "/images/projects/cashier-system.jpg",
-        "status": "Completed"
+        "title": "BlockMaps SaaS",
+        "slug": "blockmaps-saas",
+        "description": "Enterprise SaaS platform untuk commercial real estate mapping dengan advanced filtering dan multi-user management",
+        "category": "saas",
+        "tech": "Next.js, tRPC, Prisma, TypeScript, Tailwind CSS",
+        "image": "🗺️",
+        "imagePath": "",
+        "status": "Active"
     },
     {
-        "title": "Portfolio Website",
-        "slug": "portfolio-website",
-        "description": "Modern portfolio website built with Next.js, featuring 3D animations, custom cursor effects, and responsive design.",
+        "title": "PDAM Management Dashboard",
+        "slug": "pdam-management",
+        "description": "Web dashboard untuk monitoring dan management sistem air bersih dengan real-time analytics",
         "category": "web",
-        "tech": "Next.js, TypeScript, Tailwind CSS, Framer Motion",
-        "image": "🌐",
-        "imagePath": "/images/projects/portfolio-website.jpg",
-        "status": "Completed"
-    },
-    {
-        "title": "Finance Dashboard",
-        "slug": "finance-dashboard",
-        "description": "A financial analytics dashboard with real-time data visualization, ROI calculations, and investment tracking features.",
-        "category": "finance",
-        "tech": "React, Chart.js, Node.js, MySQL",
+        "tech": "Next.js, React, Recharts, TypeScript, Tailwind CSS",
         "image": "📊",
-        "imagePath": "/images/projects/finance-dashboard.jpg",
-        "status": "In Progress"
+        "imagePath": "",
+        "status": "Active"
     },
     {
-        "title": "E-Commerce API",
-        "slug": "ecommerce-api",
-        "description": "RESTful API for e-commerce platform built with NestJS, featuring authentication, payment processing, and order management.",
+        "title": "AgroConnect Hub",
+        "slug": "agroconnect-hub",
+        "description": "Platform pertanian digital yang menghubungkan petani dengan buyer menggunakan AI untuk smart recommendations",
+        "category": "web",
+        "tech": "React, Vite, TypeScript, Lovable AI, Tailwind CSS",
+        "image": "🌾",
+        "imagePath": "",
+        "status": "Development"
+    },
+    {
+        "title": "Smart Inventory System",
+        "slug": "smart-inventory",
+        "description": "Full-stack inventory management SaaS dengan real-time stock tracking dan automated alerts",
+        "category": "saas",
+        "tech": "NestJS, React, TypeScript, Prisma, PostgreSQL",
+        "image": "📦",
+        "imagePath": "",
+        "status": "Development"
+    },
+    {
+        "title": "Personal Portfolio Website",
+        "slug": "personal-portfolio",
+        "description": "Showcase portfolio dengan smooth animations dan modern design untuk display professional work",
+        "category": "web",
+        "tech": "Next.js, Framer Motion, TypeScript, Tailwind CSS",
+        "image": "💼",
+        "imagePath": "",
+        "status": "Active"
+    },
+    {
+        "title": "Translator Pro",
+        "slug": "translator-pro",
+        "description": "Desktop application untuk real-time translation dengan support multiple languages",
+        "category": "desktop",
+        "tech": "C#, Windows Forms, .NET 8.0",
+        "image": "🔤",
+        "imagePath": "",
+        "status": "Active"
+    },
+    {
+        "title": "TechMaster Python",
+        "slug": "techmaster-python",
+        "description": "Educational project demonstrating OOP principles, inheritance, dan polymorphism dalam Python",
         "category": "backend",
-        "tech": "NestJS, TypeScript, MySQL, JWT",
-        "image": "🛒",
-        "imagePath": "/images/projects/ecommerce-api.jpg",
-        "status": "Completed"
+        "tech": "Python, OOP, Design Patterns",
+        "image": "🐍",
+        "imagePath": "",
+        "status": "Active"
     },
     {
-        "title": "Cloud Deployment Tool",
-        "slug": "cloud-deployment",
-        "description": "Automated deployment tool for AWS infrastructure, simplifying CI/CD pipelines and cloud resource management.",
-        "category": "devops",
-        "tech": "AWS, Docker, GitHub Actions, Python",
-        "image": "☁️",
-        "imagePath": "/images/projects/cloud-deployment.jpg",
-        "status": "In Progress"
+        "title": "Local Finder Gemini",
+        "slug": "local-finder-gemini",
+        "description": "Smart local file management system dengan Google Gemini API integration untuk intelligent file searching",
+        "category": "ai",
+        "tech": "Python, Google Gemini API, File System",
+        "image": "🤖",
+        "imagePath": "",
+        "status": "Development"
     }
-]
+];
 
 export function ProjectsList({ data }: { data: typeof projectsData }) {
     return (

@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { projectsData } from "@/components/projects";
 
-const categories = ["all", "web", "backend", "finance", "devops"];
+const categories = ["all", "web", "saas", "backend", "desktop", "ai"];
 
 export default function ProjectsPage() {
     const [filter, setFilter] = useState("all");
@@ -67,9 +67,10 @@ export default function ProjectsPage() {
                                     <Image
                                         src={project.imagePath}
                                         alt={project.title}
-                                        width={350}
-                                        height={200}
+                                        fill
                                         className="project-image"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        style={{ objectFit: 'cover' }}
                                         onError={(e) => {
                                             const target = e.target as HTMLImageElement;
                                             target.style.display = "none";

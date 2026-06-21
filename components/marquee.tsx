@@ -2,19 +2,27 @@
 
 export default function Marquee(){
     const skills = [
-        "Fullstack Developer & Finance Enthusiast",
+        "Full Stack Development",
+        "Backend Dev",
+        "Frontnd Dev",
+        "AI Automation",
+        "Cloud Computing",
         "Next.js",
         "React",
         "TypeScript",
         "NestJS",
         "Node.js",
+        "Prisma",
         "MySQL",
         "AWS",
-        "JavaScript",
-        "ROI Analysis",
-        "Data-Driven Decisions",
+        "Google Cloud",
+        "Linux",
+        "Docker",
+        "REST API",
+        "Authentication & RBAC",
+        "GitHub",
         "Tailwind CSS",
-        "Framer Motion"
+        "Telegram Bot Integration"
     ];
 
     return (

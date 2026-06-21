@@ -5,9 +5,9 @@ import Lanyard3D from "@/components/lanyard-3d";
 
 export default function AboutPage() {
   const experiences = [
-    { year: "2026 - Right Now", title: "Fullstack Developer", desc: "Building modern web applications" },
-    { year: "2024 - Right Now", title: "Student at", desc: "SMK Telkom Malang - RPL Expertise" },
-    { year: "2021 - Right Now", title: "Finance Analys", desc: "Exploring finance-tech, Investment Analysis" }
+    { year: "2026 — Present", title: "AI Automation Developer", desc: "Building intelligent workflows, local AI tools, Gemini integrations, automation systems, and productivity-focused applications." },
+    { year: "2026 — Present", title: "Full Stack Developer", desc: "Developing SaaS platforms, inventory systems, management dashboards, and modern web applications using Next.js, NestJS, TypeScript, Prisma, and PostgreSQL." },
+    { year: "2024 — Present", title: "Software Engineering Student", desc: "SMK Telkom Malang — Rekayasa Perangkat Lunak (RPL). Focused on software engineering, backend development, databases, cloud computing, and modern application architecture." }
   ];
 
   return (
@@ -39,16 +39,15 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="about-text">
-              <h2>Fullstack Developer & Finance Enthusiast</h2>
+              <h2>Software Engineering Student • Full Stack Developer • AI Automation Enthusiast</h2>
               <p>
-                I'm Fahmi Maulana, a passionate fullstack developer who loves building web applications 
-                and has a deep interest in finance. My unique combination of technical skills and financial 
-                knowledge allows me to create solutions that bridge the gap between technology and business.
+                I'm Fahmi Aqila Maulana, a Software Engineering student at SMK Telkom Malang with a strong passion for Full Stack Development, Backend Engineering, Cloud Computing, and AI-powered Automation.
               </p>
               <p>
-                Currently studying at SMK Telkom Malang with a focus on Software Engineering (RPL), 
-                I'm constantly learning and exploring new technologies to stay ahead in the ever-evolving 
-                tech landscape.
+                I enjoy building scalable web applications, designing backend architectures, developing SaaS products, and integrating modern AI technologies into practical workflows. My projects range from enterprise inventory systems and utility management platforms to desktop applications, intelligent file search systems powered by Google Gemini, and backend-focused learning repositories.
+              </p>
+              <p>
+                Beyond web development, I actively explore Linux server administration, cloud infrastructure, automation workflows, and software architecture to continuously improve my engineering skills.
               </p>
             </div>
 
