@@ -2197,3 +2197,84 @@ body {
     padding: 20px 30px 0 !important;
   }
 }
+/* Fix About Page Layout on Mobile (Prevent Sticky Lanyard) */
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .about-left {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+
+/* --- RESPONSIVE FIXES (MOBILE & TABLET) --- */
+
+@media (max-width: 968px) {
+  /* Contact Page Grid Fix */
+  .contact-content {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Global Container Padding for Mobile */
+  .container {
+    padding: 100px 24px 40px !important;
+  }
+
+  /* Navbar Mobile Menu */
+  .hamburger {
+    display: flex !important;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease-in-out;
+    padding: 40px 20px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+  
+  .nav-links.open {
+    right: 0;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-links li a {
+    display: block;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .contact-btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+  }
+  
+  /* Resume Certifications */
+  .certifications-list {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .resume-content {
+    grid-template-columns: 1fr !important;
+  }
+}
+
