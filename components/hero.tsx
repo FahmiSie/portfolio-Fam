@@ -30,7 +30,7 @@ export default function Hero(){
                     initial={{ opacity: 0}}
                     animate={{opacity: 0.7}}
                     transition={{duration: 0.8, delay: 0.3}}
-                    >I'm deeply passionate about Finance and Tech Industries
+                    >I'm deeply passionate about Full-Stack Development, AI Automation, and Backend Engineering.
                     </motion.p>
                 </div>
 
