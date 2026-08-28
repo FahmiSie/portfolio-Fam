@@ -1,58 +1,101 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function ResumePage() {
   const education = [
     {
-      period: "2024 - Present",
+      period: "2024 — Present",
       institution: "SMK Telkom Malang",
       program: "Rekayasa Perangkat Lunak (Software Engineering)",
-      description: "Focused on full-stack development, software architecture, backend engineering, cloud technologies, databases, and AI-powered systems."
+      description: "Focused on software engineering, full-stack web development, backend engineering, databases, cloud computing, and AI integration."
     }
   ];
 
   const experiences = [
     {
-      period: "2026 - Present",
+      period: "2026 — Present",
       title: "Full Stack Developer",
-      company: "Freelance & Projects",
-      description: "Building production-grade web applications using modern technologies such as Next.js, TypeScript, NestJS, Prisma, PostgreSQL, and cloud-based services. Key Projects: BlockMaps SaaS, PDAM Management Dashboard, AgroConnect Hub.",
-      technologies: ["Next.js", "TypeScript", "NestJS", "Prisma", "PostgreSQL", "Cloud Services"]
+      company: "Personal & Collaborative Projects",
+      description: "Building and contributing to modern web applications and SaaS products across frontend and backend. Experienced in developing APIs, designing relational databases, implementing authentication and role-based access control, and integrating third-party services.",
+      technologies: ["Next.js", "TypeScript", "NestJS", "Prisma", "PostgreSQL", "Docker"]
     },
     {
-      period: "2026 - Present",
-      title: "AI Automation Developer",
-      company: "Projects",
-      description: "Developing automation systems and AI-powered tools utilizing Google Gemini API, local AI search systems, workflow automation, and intelligent productivity solutions.",
-      technologies: ["Google Gemini API", "Workflow Automation", "Local AI Search"]
+      period: "2026 — Present",
+      title: "Backend Developer",
+      company: "Teaching Factory — SMK Telkom Malang",
+      description: "Developing backend services for a management system in collaboration with frontend and backend teammates. Responsible for REST API development, database design, business logic, and transactional operations.",
+      technologies: ["NestJS", "TypeScript", "Prisma", "MySQL", "REST API"]
     },
     {
-      period: "2024 - Present",
-      title: "Backend & Software Engineering Learner",
-      company: "Self-Learning & Projects",
-      description: "Exploring software architecture, OOP principles, business logic implementation, and scalable backend development through advanced personal projects. Key Projects: TechMaster Python, Enterprise Inventory Systems.",
-      technologies: ["Software Architecture", "OOP", "Backend Development"]
+      period: "2026 — Present",
+      title: "Full Stack Developer",
+      company: "Nusa Cafe Finder",
+      description: "Building a cafe discovery platform that helps users find cafes based on Wi-Fi availability, power outlets, operating hours, and ambience. Integrating mapping services and AI capabilities into the application.",
+      technologies: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Google Maps Platform", "Gemini API", "Docker"]
+    },
+    {
+      period: "2026 — Present",
+      title: "Backend & DevOps Developer",
+      company: "MokeT",
+      description: "Developing the backend architecture for an event and ticketing platform using Laravel and PostgreSQL. Working on authentication, multi-role authorization, organization membership, event management, and cloud deployment.",
+      technologies: ["Laravel", "PHP", "PostgreSQL", "Sanctum", "Docker", "Google Cloud"]
+    },
+    {
+      period: "2026 — Present",
+      title: "Frontend Developer",
+      company: "BlockMaps",
+      description: "Contributing to a SaaS platform for commercial real-estate mapping. Responsible for frontend development and integration with backend services, authentication, role-based access control, and payment-related features.",
+      technologies: ["Next.js", "TypeScript", "tRPC", "Prisma", "Tailwind CSS", "Midtrans", "NextAuth"]
     }
   ];
 
   const certifications = [
     {
-      title: "AWS Cloud Computing Fundamentals",
-      issuer: "Amazon Web Services",
-      image: "/image/certificates/aws-cert.png"
+      title: "UKK — Full-Stack Web Development",
+      issuer: "SMK Telkom Malang",
+      type: "Competency Certificate",
+      achievement: "Sangat Kompeten",
+      image: "🏆"
     },
     {
-      title: "Banyuwangi AI Certification",
-      issuer: "Banyuwangi Tech",
-      image: "/image/certificates/banyuwangi-ai.png"
+      title: "SQL (Advanced)",
+      issuer: "HackerRank",
+      type: "Certificate",
+      image: "💻"
     },
     {
-      title: "AMD Technology Certification",
-      issuer: "AMD",
-      image: "/image/certificates/amd-cert.png"
+      title: "REST API (Intermediate)",
+      issuer: "HackerRank",
+      type: "Certificate",
+      image: "🔌"
+    },
+    {
+      title: "Build With AI",
+      issuer: "GDG Surabaya",
+      type: "Certificate of Participation",
+      image: "🤖"
+    },
+    {
+      title: "Introduction to Data Science",
+      issuer: "Cisco Networking Academy",
+      type: "Course Certificate",
+      image: "📊"
+    },
+    {
+      title: "Introduction to IoT",
+      issuer: "Cisco Networking Academy",
+      type: "Course Certificate",
+      image: "🌐"
     }
+  ];
+
+  const technicalFocus = [
+    { title: "Full Stack Development", skills: "Next.js · React · TypeScript · JavaScript · Tailwind CSS" },
+    { title: "Backend Engineering", skills: "NestJS · Express.js · Laravel · REST API · Prisma" },
+    { title: "Database", skills: "PostgreSQL · MySQL · MariaDB" },
+    { title: "AI Integration", skills: "Google Gemini API · AI Integration · Prompt Engineering · AI Automation" },
+    { title: "Cloud & DevOps", skills: "Google Cloud Platform · Docker · Git/GitHub · Linux" }
   ];
 
   return (
@@ -65,15 +108,9 @@ export default function ResumePage() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="page-title">Resume</h1>
-          <motion.a
-            href="/resume.pdf"
-            download
-            className="download-btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            📄 Download PDF
-          </motion.a>
+          <p className="section-subtitle !mt-2 !mb-8 md:!mb-12">
+            Software Engineering Student · Full Stack Developer · Backend & AI Integration
+          </p>
         </motion.div>
 
         <div className="resume-content">
@@ -83,36 +120,57 @@ export default function ResumePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="section-title">Education</h2>
+            <h2 className="section-title !text-3xl md:!text-5xl !mb-6 md:!mb-8">Education</h2>
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                className="resume-item"
+                className="resume-item !pb-6 md:!pb-10 !mb-6 md:!mb-10 !gap-4 md:!gap-10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               >
                 <div className="item-period">{edu.period}</div>
                 <div className="item-content">
-                  <h3>{edu.institution}</h3>
+                  <h3 className="!text-xl md:!text-2xl">{edu.institution}</h3>
                   <p className="item-subtitle">{edu.program}</p>
                   <p className="item-description">{edu.description}</p>
                 </div>
               </motion.div>
             ))}
+
+            <h2 className="section-title !text-3xl md:!text-5xl !mt-10 md:!mt-16 !mb-6 md:!mb-8">Technical Focus</h2>
+            <div className="resume-item !pb-6 md:!pb-10 !mb-6 md:!mb-10" style={{ borderLeft: 'none', paddingLeft: 0 }}>
+              <div className="item-content">
+                {technicalFocus.map((focus, index) => (
+                  <div key={index} style={{ marginBottom: '20px' }}>
+                    <h3 style={{ fontSize: '1.2rem', marginBottom: '5px' }}>{focus.title}</h3>
+                    <p style={{ color: 'var(--text-color)', opacity: 0.8 }}>{focus.skills}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <h2 className="section-title !text-3xl md:!text-5xl !mt-10 md:!mt-16 !mb-6 md:!mb-8">Currently Exploring</h2>
+            <div className="resume-item !pb-6 md:!pb-10 !mb-6 md:!mb-10" style={{ borderLeft: 'none', paddingLeft: 0 }}>
+              <div className="item-content">
+                <p style={{ color: 'var(--text-color)', opacity: 0.8, fontSize: '1.1rem', lineHeight: '1.8' }}>
+                  Cloud deployment · AI-powered applications · Backend architecture · Automation workflows · AWS
+                </p>
+              </div>
+            </div>
           </motion.section>
 
           <motion.section
-            className="resume-section"
+            className="resume-section !mt-8 md:!mt-12"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="section-title">Experience</h2>
+            <h2 className="section-title !text-3xl md:!text-5xl !mb-6 md:!mb-8">Experience</h2>
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                className="resume-item"
+                className="resume-item !pb-6 md:!pb-10 !mb-6 md:!mb-10 !gap-4 md:!gap-10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -130,38 +188,38 @@ export default function ResumePage() {
                 </div>
               </motion.div>
             ))}
-          </motion.section>
 
-          <motion.section
-            className="resume-section"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <h2 className="section-title">Certifications</h2>
-            <div className="projects-grid mt-6">
+            <h2 className="section-title !text-3xl md:!text-5xl !mt-12 md:!mt-20 !mb-8 md:!mb-12">Certifications & Credentials</h2>
+            <div className="projects-grid mt-6 pb-12">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
-                  className="project-card"
+                  className="project-card !p-5 md:!p-6"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -10 }}
                 >
-                  <div className="project-image-wrapper">
-                    <img 
-                      src={cert.image} 
-                      alt={cert.title}
-                      className="project-image"
-                      style={{ objectFit: 'cover' }}
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?w=800&q=80"
-                      }}
-                    />
+                  <div className="project-image-wrapper !h-28 md:!h-36 !mb-4 md:!mb-6">
+                    <div className="project-icon !text-4xl" style={{ display: "flex" }}>
+                        {cert.image}
+                    </div>
                   </div>
+                  
+                  <div className="project-status" style={{ background: 'rgba(255, 92, 53, 0.1)', color: '#ff5c35' }}>
+                    {cert.type}
+                  </div>
+                  
                   <h2 className="project-title">{cert.title}</h2>
-                  <p className="project-description text-orange-500">{cert.issuer}</p>
+                  <p className="project-description">{cert.issuer}</p>
+                  
+                  {cert.achievement && (
+                    <div className="mt-2">
+                      <span className="text-xs font-bold text-green-500 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20 inline-block">
+                        ★ {cert.achievement}
+                      </span>
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </div>
