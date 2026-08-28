@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { projectsData } from "@/components/projects";
-import LogoStrip from "../logo-strip";
 
 export default function HomeSections() {
   const featuredProjects = projectsData.slice(0, 3);
@@ -13,8 +12,6 @@ export default function HomeSections() {
 
   return (
     <>
-      <LogoStrip />
-
       {/* Featured Projects Section */}
       <section className="home-section featured-projects">
         <div className="container">

@@ -5,9 +5,21 @@ import Lanyard3D from "@/components/lanyard-3d";
 
 export default function AboutPage() {
   const experiences = [
-    { year: "2026 — Present", title: "AI Automation Developer", desc: "Building intelligent workflows, local AI tools, Gemini integrations, automation systems, and productivity-focused applications." },
-    { year: "2026 — Present", title: "Full Stack Developer", desc: "Developing SaaS platforms, inventory systems, management dashboards, and modern web applications using Next.js, NestJS, TypeScript, Prisma, and PostgreSQL." },
-    { year: "2024 — Present", title: "Software Engineering Student", desc: "SMK Telkom Malang — Rekayasa Perangkat Lunak (RPL). Focused on software engineering, backend development, databases, cloud computing, and modern application architecture." }
+    {
+      year: "2026 — Present",
+      title: "Full Stack Developer",
+      desc: "Building and contributing to real-world web applications, SaaS platforms, management systems, and backend services using Next.js, NestJS, TypeScript, Prisma, and PostgreSQL.",
+    },
+    {
+      year: "2026 — Present",
+      title: "Backend & AI Integration",
+      desc: "Exploring backend engineering, AI integration, and automation by combining modern APIs and AI services with practical applications and development workflows.",
+    },
+    {
+      year: "2024 — Present",
+      title: "Software Engineering",
+      desc: "Studying Software Engineering (RPL) at SMK Telkom Malang, with a focus on web development, backend systems, databases, and software architecture.",
+    },
   ];
 
   return (
@@ -39,29 +51,56 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="about-text">
-              <h2>Software Engineering Student • Full Stack Developer • AI Automation Enthusiast</h2>
+              <h2>
+                Software Engineering Student · Full Stack Developer ·
+                AI & Cloud Enthusiast
+              </h2>
+
               <p>
-                I'm Fahmi Aqila Maulana, a Software Engineering student at SMK Telkom Malang with a strong passion for Full Stack Development, Backend Engineering, Cloud Computing, and AI-powered Automation.
+                I'm Fahmi Aqila Maulana, a Software Engineering student at
+                SMK Telkom Malang with a strong interest in Full Stack
+                Development, Backend Engineering, AI Integration, and Cloud
+                Computing.
               </p>
+
               <p>
-                I enjoy building scalable web applications, designing backend architectures, developing SaaS products, and integrating modern AI technologies into practical workflows. My projects range from enterprise inventory systems and utility management platforms to desktop applications, intelligent file search systems powered by Google Gemini, and backend-focused learning repositories.
+                I enjoy turning ideas into functional applications — from
+                designing database structures and building REST APIs to
+                developing responsive interfaces and connecting applications
+                with external services and AI technologies.
               </p>
+
               <p>
-                Beyond web development, I actively explore Linux server administration, cloud infrastructure, automation workflows, and software architecture to continuously improve my engineering skills.
+                My current work includes building SaaS products, management
+                systems, backend services, and practical applications using
+                technologies such as Next.js, NestJS, TypeScript, Laravel,
+                PostgreSQL, Prisma, Docker, and Google Cloud.
+              </p>
+
+              <p>
+                I'm continuously improving my engineering skills through
+                real-world projects, collaborative development, and
+                experimentation with cloud infrastructure, automation, and
+                AI-powered applications.
               </p>
             </div>
 
             <div className="experience-timeline">
               <h3>Journey</h3>
+
               {experiences.map((exp, index) => (
                 <motion.div
                   key={index}
                   className="timeline-item"
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.4 + index * 0.1,
+                  }}
                 >
                   <div className="timeline-year">{exp.year}</div>
+
                   <div className="timeline-content">
                     <h4>{exp.title}</h4>
                     <p>{exp.desc}</p>

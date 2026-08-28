@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -48,6 +49,9 @@ export default function Navbar() {
         </li> */}
         <li className={`contact-btn ${pathname === "/contact" ? "active" : ""}`}>
           <Link href="/contact">Contact</Link>
+        </li>
+        <li>
+          <ThemeToggle />
         </li>
       </ul>
     </nav>

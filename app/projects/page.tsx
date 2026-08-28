@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { projectsData } from "@/components/projects";
 
-const categories = ["all", "web", "saas", "backend", "desktop", "ai"];
+const categories = ["all", "web", "saas", "backend"];
 
 export default function ProjectsPage() {
     const [filter, setFilter] = useState("all");

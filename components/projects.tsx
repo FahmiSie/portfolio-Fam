@@ -13,87 +13,225 @@
  * Jika gambar tidak ditemukan, akan otomatis menampilkan emoji icon sebagai fallback
  */
 
-export const projectsData = [
-    {
-        "title": "BlockMaps SaaS",
-        "slug": "blockmaps-saas",
-        "description": "Enterprise SaaS platform untuk commercial real estate mapping dengan advanced filtering dan multi-user management",
-        "category": "saas",
-        "tech": "Next.js, tRPC, Prisma, TypeScript, Tailwind CSS",
-        "image": "🗺️",
-        "imagePath": "",
-        "status": "Active"
-    },
-    {
-        "title": "PDAM Management Dashboard",
-        "slug": "pdam-management",
-        "description": "Web dashboard untuk monitoring dan management sistem air bersih dengan real-time analytics",
-        "category": "web",
-        "tech": "Next.js, React, Recharts, TypeScript, Tailwind CSS",
-        "image": "📊",
-        "imagePath": "",
-        "status": "Active"
-    },
-    {
-        "title": "AgroConnect Hub",
-        "slug": "agroconnect-hub",
-        "description": "Platform pertanian digital yang menghubungkan petani dengan buyer menggunakan AI untuk smart recommendations",
-        "category": "web",
-        "tech": "React, Vite, TypeScript, Lovable AI, Tailwind CSS",
-        "image": "🌾",
-        "imagePath": "",
-        "status": "Development"
-    },
-    {
-        "title": "Smart Inventory System",
-        "slug": "smart-inventory",
-        "description": "Full-stack inventory management SaaS dengan real-time stock tracking dan automated alerts",
-        "category": "saas",
-        "tech": "NestJS, React, TypeScript, Prisma, PostgreSQL",
-        "image": "📦",
-        "imagePath": "",
-        "status": "Development"
-    },
-    {
-        "title": "Personal Portfolio Website",
-        "slug": "personal-portfolio",
-        "description": "Showcase portfolio dengan smooth animations dan modern design untuk display professional work",
-        "category": "web",
-        "tech": "Next.js, Framer Motion, TypeScript, Tailwind CSS",
-        "image": "💼",
-        "imagePath": "",
-        "status": "Active"
-    },
-    {
-        "title": "Translator Pro",
-        "slug": "translator-pro",
-        "description": "Desktop application untuk real-time translation dengan support multiple languages",
-        "category": "desktop",
-        "tech": "C#, Windows Forms, .NET 8.0",
-        "image": "🔤",
-        "imagePath": "",
-        "status": "Active"
-    },
-    {
-        "title": "TechMaster Python",
-        "slug": "techmaster-python",
-        "description": "Educational project demonstrating OOP principles, inheritance, dan polymorphism dalam Python",
-        "category": "backend",
-        "tech": "Python, OOP, Design Patterns",
-        "image": "🐍",
-        "imagePath": "",
-        "status": "Active"
-    },
-    {
-        "title": "Local Finder Gemini",
-        "slug": "local-finder-gemini",
-        "description": "Smart local file management system dengan Google Gemini API integration untuk intelligent file searching",
-        "category": "ai",
-        "tech": "Python, Google Gemini API, File System",
-        "image": "🤖",
-        "imagePath": "",
-        "status": "Development"
-    }
+export interface ProjectData {
+  title: string;
+  slug: string;
+  description: string;
+  category: string;
+  tech: string;
+  image: string;
+  imagePath: string;
+  status: string;
+  role: string;
+  period: string;
+  overview: string;
+  contributions: string[];
+  features: string[];
+  technologies: string[];
+  team?: string;
+  github: string | null;
+  githubExtra?: { label: string; url: string } | null;
+  demo: string | null;
+}
+
+export const projectsData: ProjectData[] = [
+  {
+    title: "Nusa Cafe Finder",
+    slug: "nusa-cafe-finder",
+    description: "A full-stack cafe discovery platform combining location-based services with AI-powered recommendations.",
+    category: "web",
+    tech: "Next.js, NestJS, TypeScript, PostgreSQL, Gemini API",
+    image: "☕",
+    imagePath: "",
+    status: "In Development",
+    role: "Full Stack Developer",
+    period: "June 2026 – Present",
+    overview: "Nusa Cafe Finder is a full-stack platform focused on making cafe discovery more useful and personalized. The application combines location-based services with AI capabilities to help users discover cafes based on practical working and lifestyle preferences such as Wi-Fi availability, power outlets, opening hours, and ambience.",
+    contributions: [
+      "Developed full-stack application architecture",
+      "Built backend APIs using NestJS",
+      "Designed and managed PostgreSQL database with Prisma",
+      "Integrated Google Maps Platform for location-based functionality",
+      "Integrated Gemini API for AI-powered features",
+      "Implemented cloud storage using Google Cloud Storage",
+      "Containerized the application using Docker",
+      "Developed responsive interfaces using Next.js and Tailwind CSS"
+    ],
+    features: [
+      "Cafe discovery with smart search",
+      "Location-based cafe information",
+      "AI-powered cafe recommendations",
+      "Wi-Fi and power outlet availability info",
+      "Opening hours & ambience details",
+      "Google Maps integration",
+      "AI integration with Gemini API"
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "NestJS", "PostgreSQL", "Prisma", "Google Maps Platform", "Gemini API", "Google Cloud Storage", "Docker", "Tailwind CSS"],
+    github: null,
+    demo: null
+  },
+  {
+    title: "MokeT",
+    slug: "moket",
+    description: "An event management backend focused on authentication, multi-role access control, organization management, and event operations.",
+    category: "backend",
+    tech: "Laravel, PHP, PostgreSQL, Docker, Google Cloud",
+    image: "🎫",
+    imagePath: "",
+    status: "In Development",
+    role: "Backend & DevOps Developer",
+    period: "2026 – Present",
+    overview: "MokeT is an event management platform where I focus primarily on backend development and DevOps. The project uses Laravel and PostgreSQL to build a structured API with authentication, role management, organization membership, and event-related functionality.",
+    contributions: [
+      "Designed and developed backend APIs using Laravel",
+      "Implemented authentication using Laravel Sanctum",
+      "Designed PostgreSQL database structure",
+      "Implemented global and contextual role management",
+      "Designed organization and organization membership system",
+      "Implemented authorization using Laravel Policies",
+      "Developed event management functionality",
+      "Worked on Docker-based development environment",
+      "Worked on Google Cloud deployment"
+    ],
+    features: [
+      "Token-based authentication with Laravel Sanctum",
+      "Multi-role access control (Global & Organization roles)",
+      "Organization management & membership",
+      "Event management functionality",
+      "Authorization policies",
+      "REST API architecture"
+    ],
+    technologies: ["Laravel", "PHP", "PostgreSQL", "Laravel Sanctum", "Docker", "Google Cloud", "REST API", "Git"],
+    team: "Collaborative Development",
+    github: "https://github.com/FahmiSie/moket-backend",
+    demo: null
+  },
+  {
+    title: "BlockMaps SaaS",
+    slug: "blockmaps-saas",
+    description: "A commercial real-estate mapping SaaS platform with advanced filtering and multi-user management.",
+    category: "saas",
+    tech: "Next.js, TypeScript, tRPC, Prisma, Tailwind CSS",
+    image: "🗺️",
+    imagePath: "",
+    status: "Active",
+    role: "Frontend Engineer",
+    period: "2026 – Present",
+    overview: "BlockMaps is a SaaS platform designed for commercial real-estate mapping. The application provides an interactive mapping experience combined with filtering, user management, authentication, and role-based access control.",
+    contributions: [
+      "Developed frontend application using Next.js and TypeScript",
+      "Built reusable UI components",
+      "Implemented data interaction using tRPC",
+      "Integrated Prisma-based data models",
+      "Implemented responsive UI with Tailwind CSS",
+      "Worked with authentication and role-based access control",
+      "Integrated Cloudinary for media management",
+      "Integrated payment functionality using Midtrans"
+    ],
+    features: [
+      "Interactive commercial real-estate mapping",
+      "Advanced filtering system",
+      "Multi-user management",
+      "Authentication & role-based access control",
+      "Media management with Cloudinary",
+      "Payment integration with Midtrans"
+    ],
+    technologies: ["Next.js", "TypeScript", "tRPC", "Prisma", "Tailwind CSS", "Cloudinary", "Midtrans", "NextAuth", "RBAC"],
+    team: "2 Developers (1 Frontend, 1 Backend)",
+    github: "https://github.com/FahmiSie/blockmaps-SaaS",
+    demo: null
+  },
+  {
+    title: "Teaching Factory Management System",
+    slug: "teaching-factory",
+    description: "A backend management system for Teaching Factory operations, providing structured REST APIs and database management.",
+    category: "backend",
+    tech: "NestJS, TypeScript, Prisma, MySQL",
+    image: "🏭",
+    imagePath: "",
+    status: "Completed",
+    role: "Backend Developer",
+    period: "2025 – 2026",
+    overview: "Teaching Factory Management System is a web-based management application where I contributed primarily to the backend. The system uses NestJS to provide REST APIs and Prisma to manage relational data stored in MySQL.",
+    contributions: [
+      "Developed backend REST APIs using NestJS",
+      "Designed database interactions using Prisma ORM",
+      "Worked with MySQL database",
+      "Implemented backend business logic",
+      "Managed database transactions",
+      "Collaborated with frontend developer"
+    ],
+    features: [
+      "REST API architecture",
+      "Database management with Prisma",
+      "Transaction handling",
+      "Backend business logic"
+    ],
+    technologies: ["NestJS", "TypeScript", "Prisma", "MySQL", "REST API"],
+    team: "2 Developers (1 Frontend, 1 Backend)",
+    github: null,
+    demo: null
+  },
+  {
+    title: "Smart Inventory System",
+    slug: "smart-inventory",
+    description: "A full-stack inventory management system focused on real-time stock tracking and inventory operations.",
+    category: "saas",
+    tech: "NestJS, React, TypeScript, Prisma, PostgreSQL",
+    image: "📦",
+    imagePath: "",
+    status: "In Development",
+    role: "Backend Developer",
+    period: "2026 – Present",
+    overview: "Smart Inventory System is an inventory management application designed to handle product and stock-related operations. My primary contribution is on the backend, building APIs and database functionality using NestJS, Prisma, and PostgreSQL.",
+    contributions: [
+      "Developed backend APIs using NestJS",
+      "Designed database models using Prisma",
+      "Worked with PostgreSQL",
+      "Implemented backend inventory logic",
+      "Integrated backend with the frontend application"
+    ],
+    features: [
+      "Inventory management",
+      "Real-time stock tracking",
+      "Backend API",
+      "Database management",
+      "Frontend integration"
+    ],
+    technologies: ["NestJS", "TypeScript", "Prisma", "PostgreSQL", "React"],
+    github: "https://github.com/FahmiSie/smart_inventory-backend",
+    githubExtra: { label: "Frontend Repo", url: "https://github.com/FahmiSie/smart_inventory-frontend" },
+    demo: null
+  },
+  {
+    title: "PDAM Management Dashboard",
+    slug: "pdam-management",
+    description: "A web-based management dashboard for monitoring and visualizing PDAM operational data through an interactive interface.",
+    category: "web",
+    tech: "Next.js, React, TypeScript, Recharts, Tailwind CSS",
+    image: "📊",
+    imagePath: "",
+    status: "Active",
+    role: "Frontend Developer",
+    period: "2026 – Present",
+    overview: "PDAM Management Dashboard is a web dashboard focused on presenting management and operational information through an interactive frontend interface. The project uses Next.js and React with Recharts for data visualization.",
+    contributions: [
+      "Developed frontend interface using Next.js",
+      "Built interactive dashboard components with React",
+      "Implemented responsive UI using Tailwind CSS",
+      "Integrated data visualization using Recharts",
+      "Structured frontend components using TypeScript"
+    ],
+    features: [
+      "Management dashboard",
+      "Interactive data visualization",
+      "Real-time analytics charts",
+      "Responsive interface"
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Recharts"],
+    github: "https://github.com/FahmiSie/pdam-management-system",
+    demo: null
+  }
 ];
 
 export function ProjectsList({ data }: { data: typeof projectsData }) {
