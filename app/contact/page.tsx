@@ -110,7 +110,8 @@ export default function ContactPage() {
                             parent.appendChild(fallback);
                           }
                         }}
-                        style={{ display: "inline-block", filter: 'invert(1)', width: '32px', height: '32px', objectFit: 'contain' }}
+                        style={{ display: "inline-block", width: '32px', height: '32px', objectFit: 'contain' }}
+                        className="contact-method-icon"
                       />
                     ) : (
                       <span>{method.icon}</span>
