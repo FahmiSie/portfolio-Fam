@@ -4,19 +4,44 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
+  
+  // Tambahkan state untuk efek loading
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      // Mengirim POST request ke API route yang kita buat tadi
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("Terima kasih! Pesan Anda telah terkirim.");
+        setFormData({ name: "", email: "", message: "" }); // Reset form
+      } else {
+        alert(`Gagal mengirim pesan: ${result.error}`);
+      }
+    } catch (error) {
+      alert("Terjadi kesalahan jaringan. Silakan coba lagi nanti.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -172,14 +197,17 @@ export default function ContactPage() {
               />
             </div>
 
-            <motion.button
+                        <motion.button
               type="submit"
               className="submit-btn"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              disabled={isSubmitting} // Disable tombol saat proses
+              whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+              whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
+              style={{ opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}
             >
-              Send Message
+              {isSubmitting ? 'Mengirim...' : 'Send Message'}
             </motion.button>
+
           </motion.form>
         </div>
       </div>
