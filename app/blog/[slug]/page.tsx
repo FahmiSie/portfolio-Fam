@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const blogPosts: Record<string, any> = {
+const blogPosts: Record<string, { title: string; date: string; category: string; readTime: string; content: string }> = {
   "building-rbac-authentication-nestjs": {
     title: "Building RBAC Authentication with NestJS",
     date: "June 20, 2026",
@@ -42,7 +42,7 @@ export default function BlogDetail({ params }: { params: Promise<{ slug: string 
       <section className="blog-detail-page page-transition">
         <div className="container">
           <h1>Blog Post Not Found</h1>
-          <p>The blog post you're looking for doesn't exist.</p>
+          <p>The blog post you&apos;re looking for doesn&apos;t exist.</p>
           <Link href="/blog" className="back-link">← Back to Blog</Link>
         </div>
       </section>

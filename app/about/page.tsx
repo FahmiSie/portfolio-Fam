@@ -57,7 +57,7 @@ export default function AboutPage() {
               </h2>
 
               <p>
-                I'm Fahmi Aqila Maulana, a Software Engineering student at
+                I&apos;m Fahmi Aqila Maulana, a Software Engineering student at
                 SMK Telkom Malang with a strong interest in Full Stack
                 Development, Backend Engineering, AI Integration, and Cloud
                 Computing.
@@ -78,7 +78,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                I'm continuously improving my engineering skills through
+                I&apos;m continuously improving my engineering skills through
                 real-world projects, collaborative development, and
                 experimentation with cloud infrastructure, automation, and
                 AI-powered applications.

@@ -100,9 +100,9 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Let's Work Together</h2>
+            <h2>Let&apos;s Work Together</h2>
             <p>
-              I'm always open to discussing new projects, creative ideas, or opportunities 
+              I&apos;m always open to discussing new projects, creative ideas, or opportunities 
               to be part of your vision. Feel free to reach out!
             </p>
 

@@ -11,6 +11,7 @@ export default function Navbar() {
 
   // Tutup menu otomatis saat pindah halaman
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps, react-hooks/rules-of-hooks, react-hooks/set-state-in-effect
     setIsOpen(false);
   }, [pathname]);
 

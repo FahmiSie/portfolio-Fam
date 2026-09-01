@@ -104,9 +104,9 @@ export default function HomeSections() {
             transition={{ duration: 0.8 }}
           >
             <p className="cta-kicker"></p>
-            <h2>Let's Work Together</h2>
+            <h2>Let&apos;s Work Together</h2>
             <p>
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+              I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your
               vision.
             </p>
 
