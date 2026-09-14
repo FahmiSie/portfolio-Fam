@@ -6,7 +6,6 @@
             "Backend Engineering",
             "Frontend Development",
             "AI Integration",
-            "Cloud Computing",
             "Next.js",
             "React",
             "TypeScript",
