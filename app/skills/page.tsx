@@ -22,6 +22,7 @@ const skillCategories = [
     skills: [
       { name: "Node.js", color: "#339933" },
       { name: "NestJS", color: "#E0234E" },
+      { name: "Laravel", color: "#FF2D20" },
       { name: "Prisma ORM", color: "#2D3748" },
       { name: "tRPC", color: "#3178C6" },
       { name: "Python", color: "#3776AB" },

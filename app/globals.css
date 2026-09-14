@@ -248,7 +248,7 @@ body {
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
   z-index: 999;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .custom-cursor.hover {
@@ -1241,10 +1241,11 @@ body {
   top: 20px;
   right: 20px;
   padding: 6px 12px;
-  background: rgba(255, 92, 53, 0.2);
+  background: #ff5c35;
   border-radius: 6px;
   font-size: 0.75rem;
-  color: #ff5c35;
+  font-weight: 600;
+  color: black;
 }
 
 .project-title {

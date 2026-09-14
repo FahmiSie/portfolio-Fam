@@ -33,23 +33,23 @@ export default function Navbar() {
         <li className={pathname === "/projects" ? "active" : ""}>
           <Link href="/projects">Projects</Link>
         </li>
-        <li className={pathname === "/blog" ? "active" : ""}>
+        {/* <li className={pathname === "/blog" ? "active" : ""}>
           <Link href="/blog">Blog</Link>
-        </li>
+        </li> */}
         <li className={pathname === "/about" ? "active" : ""}>
           <Link href="/about">About</Link>
         </li>
         <li className={pathname === "/skills" ? "active" : ""}>
           <Link href="/skills">Skills</Link>
         </li>
-        <li className={pathname === "/resume" ? "active" : ""}>
-          <Link href="/resume">Resume</Link>
+        <li className={pathname === "/certifications" ? "active" : ""}>
+          <Link href="/certifications">Certifications</Link>
         </li>
-        {/* <li className={pathname === "/testimonials" ? "active" : ""}>
-          <Link href="/testimonials">Testimonials</Link>
-        </li> */}
-        <li className={`contact-btn ${pathname === "/contact" ? "active" : ""}`}>
+        <li className={pathname === "/contact" ? "active" : ""}>
           <Link href="/contact">Contact</Link>
+        </li>
+        <li className="contact-btn">
+          <a href="/resume/Fahmi_CV.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </li>
         <li>
           <ThemeToggle />

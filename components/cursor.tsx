@@ -1,54 +1,39 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function Cursor(){
-        const [position, setPosition] = useState({ x: 0, y: 0 });
-        const [isHovering, setIsHovering] = useState(false);
+export default function Cursor() {
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [isHovering, setIsHovering] = useState(false);
 
-        useEffect(() => {
-            const move = (e: MouseEvent) => {
-                setPosition({ x: e.clientX, y: e.clientY });
-            };
+    useEffect(() => {
+        const move = (e: MouseEvent) => {
+            setPosition({ x: e.clientX, y: e.clientY });
+        };
 
-            const handleMouseEnter = () => setIsHovering(true);
-            const handleMouseLeave = () => setIsHovering(false);
+        const handleMouseOver = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            // Check if the target or its parents are interactive
+            const isInteractive = target.closest('a, button, [role="button"], input, textarea, select') || 
+                                  window.getComputedStyle(target).cursor === 'pointer';
+            setIsHovering(!!isInteractive);
+        };
 
-            const interactiveElements = document.querySelectorAll('a, button, [style*="cursor: pointer"]');
-            
-            window.addEventListener("mousemove", move);
-            
-            interactiveElements.forEach(el => {
-                el.addEventListener("mouseenter", handleMouseEnter);
-                el.addEventListener("mouseleave", handleMouseLeave);
-            });
+        window.addEventListener("mousemove", move);
+        window.addEventListener("mouseover", handleMouseOver);
 
-            return () => {
-                window.removeEventListener("mousemove", move);
-                interactiveElements.forEach(el => {
-                    el.removeEventListener("mouseenter", handleMouseEnter);
-                    el.removeEventListener("mouseleave", handleMouseLeave);
-                });
-            };
-        }, []);
+        return () => {
+            window.removeEventListener("mousemove", move);
+            window.removeEventListener("mouseover", handleMouseOver);
+        };
+    }, []);
 
     return (
-        <>
-            <div
-                className="custom-cursor"
-                style={{ 
-                    left: position.x, 
-                    top: position.y,
-                }}
-            ></div>
-            {isHovering && (
-                <div
-                    className="custom-cursor hover"
-                    style={{ 
-                        left: position.x, 
-                        top: position.y,
-                    }}
-                ></div>
-            )}
-        </>
-    )
+        <div
+            className={`custom-cursor ${isHovering ? "hover" : ""}`}
+            style={{ 
+                left: position.x, 
+                top: position.y,
+            }}
+        ></div>
+    );
 }
