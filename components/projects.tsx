@@ -210,7 +210,7 @@ export const projectsData: ProjectData[] = [
     category: "web",
     tech: "Next.js, React, TypeScript, Recharts, Tailwind CSS",
     image: "📊",
-    imagePath: "",
+    imagePath: "/image/Projects/pdam-management-system.png",
     status: "In Development",
     role: "Frontend Developer",
     period: "2026 – Present",
