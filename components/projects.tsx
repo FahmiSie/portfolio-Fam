@@ -42,7 +42,7 @@ export const projectsData: ProjectData[] = [
     category: "web",
     tech: "Next.js, NestJS, TypeScript, PostgreSQL, Gemini API",
     image: "☕",
-    imagePath: "",
+    imagePath: "/image/Projects/nusa-cafe-finder.png",
     status: "Compeleted",
     role: "Full Stack Developer",
     period: "June 2026 – Present",
