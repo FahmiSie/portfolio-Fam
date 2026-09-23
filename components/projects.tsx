@@ -233,59 +233,70 @@ export const projectsData: ProjectData[] = [
     demo: null
   },
 
-    {
+  {
     title: "SpotSpace",
     slug: "spotspace",
-    description: "A full-stack coworking space reservation platform with real-time availability checking, automated pricing, and role-based booking management.",
+    description: "A production-grade coworking space reservation platform featuring proximity-based space discovery, secure Midtrans payment integration, dual-action QR code ticketing, and cloud deployment on GCP.",
     category: "web",
-    tech: "NestJS, Next.js, TypeScript, PostgreSQL, Docker",
+    tech: "Next.js 16, NestJS 11, TypeScript, PostgreSQL, Docker Compose, GCP, Midtrans",
     image: "🏢",
     imagePath: "/image/Projects/spotspace.png",
-    status: "In Development",
-    role: "Full Stack Developer",
-    period: "September 2026 – Present",
-    overview: "SpotSpace is a full-stack coworking space reservation system built for a national vocational school competency exam (UKK). The application manages the complete booking lifecycle for shared workspaces — from catalog browsing and availability checking to reservation, check-in/check-out, and revenue reporting — with distinct role-based experiences for members and space administrators.",
+    status: "Completed",
+    role: "Full Stack & DevOps Engineer",
+    period: "August 2026 – Present",
+    overview: "SpotSpace is an end-to-end coworking space booking and management platform built for vocational competency assessment (UKK) and real-world commercial operations. The application automates the full workspace rental lifecycle — from GPS-based nearest space discovery (Haversine algorithm) and automated schedule conflict validation to multi-channel digital payment, dual-action QR check-in/check-out, and financial reporting. Deployed live on a Google Cloud Platform VM with automated SSL and reverse proxy.",
     contributions: [
-      "Designed and developed the full backend architecture using NestJS and Prisma ORM",
-      "Modeled relational database schema (PostgreSQL) covering users, spaces, reservations, discounts, and reviews",
-      "Implemented JWT-based multi-role authentication (member & admin) with route guards",
-      "Built booking logic including automated overlap detection, dynamic pricing, and discount calculation",
-      "Developed e-ticket generation with QR code verification",
-      "Implemented review & rating system, wishlist, and multi-photo gallery features",
-      "Built an in-app notification system with safe side-effect handling to avoid disrupting core transactions",
-      "Implemented monthly revenue reporting with PDF/Excel export",
-      "Containerized the full stack (backend, frontend, database) using Docker and Docker Compose",
-      "Built the frontend interface using Next.js, Tailwind CSS, and shadcn/ui"
+      "Architected modular backend services using NestJS 11 and Prisma ORM with PostgreSQL database",
+      "Implemented proximity-based space discovery utilizing the Haversine formula and Google Geocoding API to calculate distance directly on the server with minimal latency",
+      "Integrated Midtrans Payment Gateway (Snap & Webhooks) secured with SHA-512 signature hash validation and transactional state machine handling",
+      "Engineered a dual-action dynamic QR Code ticketing system enabling camera-based Check-In and Check-Out with native Web Audio API acoustic feedback",
+      "Built automated background cron tasks (@nestjs/schedule) to handle automated session checkout and release expired reservations",
+      "Developed automated financial report generation pipelines exporting monthly summaries to PDF (PDFKit) and Excel (ExcelJS)",
+      "Implemented JWT multi-role authentication (Member & Space Admin) with route guards and Google OAuth 2.0 integration",
+      "Built responsive client interface using Next.js 16, React 19, Tailwind CSS v4, and Radix/shadcn UI primitives",
+      "Containerized multi-tier stack (Frontend, Backend, PostgreSQL) using Docker Compose and deployed to GCP Compute Engine behind Nginx reverse proxy with Let's Encrypt SSL"
     ],
     features: [
-      "Real-time space availability checking",
-      "Automated booking with overlap prevention",
-      "Dynamic pricing with promo code support",
-      "Role-based access (Member & Admin Space)",
-      "E-ticket generation with QR Code",
-      "Review & rating system",
-      "Wishlist & multi-photo gallery",
-      "In-app notifications",
-      "Monthly revenue reports with PDF/Excel export",
-      "Fully containerized with Docker"
+      "Proximity-based space discovery with Haversine distance calculation",
+      "Real-time space availability checking and overlap prevention",
+      "Midtrans multi-channel payment gateway (QRIS, VA, e-Wallet)",
+      "Secure webhook processing with SHA-512 signature verification",
+      "Dual-action QR code digital e-ticket (Check-In & Check-Out)",
+      "Automated background checkout scheduler (Cron)",
+      "Role-based access control (Member & Coworking Admin)",
+      "Review and rating system with official admin replies",
+      "Financial reporting engine with PDF and Excel spreadsheet export",
+      "Production deployment on GCP VM with Docker, Nginx, and HTTPS"
     ],
-    technologies: ["NestJS", "Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS", "shadcn/ui", "Docker", "JWT", "Swagger", "Google Cloud Platform"],
+    technologies: [
+      "Next.js 16",
+      "NestJS 11",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Docker Compose",
+      "Google Cloud Platform",
+      "Nginx",
+      "Midtrans Gateway",
+      "Tailwind CSS",
+      "shadcn/ui"
+    ],
     github: "https://github.com/FahmiSie/spotspace",
-    demo: null
-  },
-  
+    demo: "https://spotspace.my.id"
+  }
+
 ];
 
 export function ProjectsList({ data }: { data: typeof projectsData }) {
-    return (
-        <div className="grid gap-4">
-            {data.map((project) => (
-                <div key={project.slug} className="p-4 border rounded">
-                    <h2>{project.title}</h2>
-                    <p>{project.description}</p>
-                    <small>{project.tech}</small>
-                </div>
-            ))}
+  return (
+    <div className="grid gap-4">
+      {data.map((project) => (
+        <div key={project.slug} className="p-4 border rounded">
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+          <small>{project.tech}</small>
         </div>
-    );
+      ))}
+    </div>
+  );
 }
