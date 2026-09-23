@@ -35,21 +35,21 @@ export default function ProfileCard3D() {
   return (
     <div className="lanyard3d-wrapper" style={{ perspective: "1200px" }}>
       {/* Tali Lanyard - Ikut bergoyang sedikit secara berlawanan */}
-      <motion.div 
+      <motion.div
         className="lanyard3d-string"
-        style={{ 
+        style={{
           rotateY: rotateY,
-          transformOrigin: "top center" 
+          transformOrigin: "top center"
         }}
       />
-      
+
       <motion.div
         className="lanyard3d-container"
         style={{
           rotateX,
           rotateY,
           transformStyle: "preserve-3d",
-          transformOrigin: "top center", 
+          transformOrigin: "top center",
         }}
       >
         <div className="lanyard3d-hole"></div>
@@ -70,7 +70,7 @@ export default function ProfileCard3D() {
           </div>
 
           <div className="lanyard3d-role" style={{ transform: "translateZ(30px)" }}>Software Engineer</div>
-          <h3 className="lanyard3d-title" style={{ transform: "translateZ(40px)" }}>Fullstack<br/>DEV</h3>
+          <h3 className="lanyard3d-title" style={{ transform: "translateZ(40px)" }}>Full Stack<br />DEV</h3>
 
           <div className="lanyard3d-footer">
             <span>©famspace.xyz</span>

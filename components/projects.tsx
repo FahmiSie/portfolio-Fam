@@ -240,7 +240,7 @@ export const projectsData: ProjectData[] = [
     category: "web",
     tech: "NestJS, Next.js, TypeScript, PostgreSQL, Docker",
     image: "🏢",
-    imagePath: "",
+    imagePath: "/image/Projects/spotspace.png",
     status: "In Development",
     role: "Full Stack Developer",
     period: "September 2026 – Present",
