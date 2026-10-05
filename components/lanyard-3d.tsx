@@ -73,7 +73,7 @@ export default function ProfileCard3D() {
           <h3 className="lanyard3d-title" style={{ transform: "translateZ(40px)" }}>Full Stack<br />DEV</h3>
 
           <div className="lanyard3d-footer">
-            <span>©famspace.xyz</span>
+            <span>©famspace.dev</span>
           </div>
         </div>
       </motion.div>
