@@ -61,10 +61,10 @@ export default function ProfileCard3D() {
         <div className="lanyard3d-card">
           <div className="lanyard3d-avatar" style={{ transform: "translateZ(50px)" }}>
             <Image
-              src="/image/profile/fam.png"
+              src="/image/profile/main-profile.jpeg"
               alt="Fahmi Aqila Maulana"
-              width={180}
-              height={180}
+              width={288}
+              height={192}
               priority
             />
           </div>

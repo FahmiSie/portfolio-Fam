@@ -387,8 +387,8 @@ body {
 
 /* Avatar */
 .lanyard3d-avatar {
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
   margin: 0 auto 20px;
   border-radius: 12px;
   overflow: hidden;
@@ -416,8 +416,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
-  transform: scale(1.8);
+  object-position: center;
   filter: contrast(1.15) brightness(0.95);
 }
 
@@ -492,8 +491,8 @@ body {
   }
 
   .lanyard3d-avatar {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    aspect-ratio: 3 / 2;
   }
 
   .lanyard3d-title {
