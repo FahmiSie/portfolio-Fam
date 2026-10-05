@@ -50,7 +50,7 @@ export default function Footer() {
         >
           <h3 className="footer-logo text-2xl font-bold text-orange-500">Famco.</h3>
           <p className="footer-description text-gray-400 mt-4">
-            Software Engineering Student & Full Stack Developer. Building modern web applications, backend systems, and AI-integrated solutions while continuously exploring cloud computing and software architecture.
+            Software Engineering Student & Full Stack Developer. Building modern web applications, backend systems, and AI-integrated solutions while continuously exploring cloud computing, DevOps, and software architecture.
           </p>
           
           <div className="footer-social flex gap-4 mt-6">

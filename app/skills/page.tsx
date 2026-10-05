@@ -26,6 +26,9 @@ const skillCategories = [
       { name: "Prisma ORM", color: "#2D3748" },
       { name: "tRPC", color: "#3178C6" },
       { name: "Python", color: "#3776AB" },
+      { name: "REST API", color: "#005C8A" },
+      { name: "Authentication", color: "#F25022" },
+      { name: "RBAC", color: "#FF9900" },
       { name: "MySQL", color: "#4479A1" },
       { name: "PostgreSQL", color: "#336791" }
     ]
@@ -34,8 +37,9 @@ const skillCategories = [
     category: "AI & Automation",
     skills: [
       { name: "Google Gemini", color: "#1A73E8" },
+      { name: "Gemini API", color: "#1A73E8" },
       { name: "AI Integration", color: "#FF9900" },
-      { name: "Prompt Eng.", color: "#F05032" },
+      { name: "Prompt Engineering", color: "#F05032" },
       { name: "Automation", color: "#4CAF50" },
       { name: "Local AI Search", color: "#9C27B0" }
     ]
@@ -43,14 +47,42 @@ const skillCategories = [
   {
     category: "Cloud & DevOps",
     skills: [
-      { name: "AWS", color: "#FF9900" },
       { name: "Google Cloud", color: "#4285F4" },
+      { name: "GCP Compute Engine", color: "#4285F4" },
+      { name: "AWS", color: "#FF9900" },
       { name: "Linux", color: "#FCC624" },
       { name: "Ubuntu Server", color: "#E95420" },
       { name: "Docker", color: "#2496ED" },
+      { name: "Docker Compose", color: "#2496ED" },
+      { name: "Nginx", color: "#009639" },
+      { name: "SSL/TLS", color: "#FF9900" },
+      { name: "Certbot", color: "#F25022" },
       { name: "GitHub Actions", color: "#2088FF" },
-      { name: "Apache2", color: "#D22128" },
       { name: "CI/CD", color: "#4CAF50" }
+    ]
+  },
+  {
+    category: "Payments & Integration",
+    skills: [
+      { name: "Midtrans", color: "#00A1E9" },
+      { name: "Payment Gateway", color: "#FF9900" },
+      { name: "Webhook", color: "#2496ED" },
+      { name: "SHA-512 Verification", color: "#333333" },
+      { name: "Google Maps Platform", color: "#4285F4" },
+      { name: "Cloudinary", color: "#3448C5" }
+    ]
+  },
+  {
+    category: "Software Engineering",
+    skills: [
+      { name: "Database Design", color: "#336791" },
+      { name: "Database Migration", color: "#E0234E" },
+      { name: "API Testing", color: "#FF6C37" },
+      { name: "Data Validation", color: "#3178C6" },
+      { name: "Geolocation", color: "#4285F4" },
+      { name: "Haversine Algorithm", color: "#9C27B0" },
+      { name: "QR Code Systems", color: "#000000" },
+      { name: "Cron Jobs", color: "#4CAF50" }
     ]
   },
   {
@@ -66,8 +98,10 @@ const skillCategories = [
     skills: [
       { name: "Git", color: "#F05032" },
       { name: "GitHub", color: "#FFFFFF" },
-      { name: "Cloudinary", color: "#3448C5" },
-      { name: "Postman", color: "#FF6C37" }
+      { name: "GitHub Actions", color: "#2088FF" },
+      { name: "Postman", color: "#FF6C37" },
+      { name: "DBeaver", color: "#3776AB" },
+      { name: "Cloudinary", color: "#3448C5" }
     ]
   }
 ];
