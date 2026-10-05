@@ -14,6 +14,13 @@ export default function CertificationsPage() {
       link: "/certif/competency_certificate_1.jpg"
     },
     {
+      title: "JavaScript (Intermediate)",
+      issuer: "HackerRank",
+      type: "Certificate",
+      image: "/certif/javascript_intermediate_certificate.jpg",
+      link: "/certif/javascript_intermediate certificate.pdf"
+    },
+    {
       title: "SQL (Advanced)",
       issuer: "HackerRank",
       type: "Certificate",
