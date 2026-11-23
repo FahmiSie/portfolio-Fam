@@ -72,13 +72,7 @@ export default function ContactPage() {
       value: "github.com/fahmisie",
       link: "https://github.com/fahmisie" 
     },
-    { 
-      icon: "📱", 
-      iconPath: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg", 
-      label: "Phone", 
-      value: "+62 82139163361", 
-      link: "https://wa.me/6282139163361" 
-    }
+
   ];
 
   return (

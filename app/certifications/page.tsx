@@ -54,6 +54,23 @@ export default function CertificationsPage() {
       type: "Course Certificate",
       image: "/certif/introduction_to_iot.jpg",
       link: "/certif/introduction_to_iot.jpg"
+    },
+    {
+      title: "Information Technology Specialist: Artificial Intelligence",
+      issuer: "Certiport / Pearson",
+      type: "Specialist Certificate",
+      date: "October 25, 2026",
+      credentialId: "wKc2i-2Fdp",
+      image: "/certif/ai_specialist_certiport.jpg",
+      link: "/certif/ai_specialist_certiport.pdf"
+    },
+    {
+      title: "AWS Certified DevOps Engineer — Professional",
+      issuer: "AWS Training & Certification",
+      type: "Exam Prep Completion",
+      date: "November 04, 2026",
+      image: "/certif/aws_devops_engineer.jpg",
+      link: "/certif/aws_devops_engineer.pdf"
     }
   ];
 
@@ -105,6 +122,14 @@ export default function CertificationsPage() {
               
               <h2 className="project-title">{cert.title}</h2>
               <p className="project-description">{cert.issuer}</p>
+              
+              {cert.date && (
+                <p className="text-xs text-gray-400 mt-1">{cert.date}</p>
+              )}
+
+              {cert.credentialId && (
+                <p className="text-xs text-gray-500 mt-1">ID: {cert.credentialId}</p>
+              )}
               
               {cert.achievement && (
                 <div className="mt-2">
